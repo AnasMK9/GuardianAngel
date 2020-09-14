@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Constants.dart';
+import 'dart:io';
+
 
 // class CustomPage extends StatelessWidget {
 //
@@ -52,7 +54,8 @@ class _ActivateButtonState extends State<ActivateButton> {
         child: Material(
           color: safe? kMainSafeColor:Colors.red, // button color
           child: InkWell(
-            splashColor: safe ? Colors.red: kMainSafeColor, // inkwell color
+            splashColor: safe ? Colors.red: kMainSafeColor,
+            
 
             child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.6,
@@ -64,6 +67,8 @@ class _ActivateButtonState extends State<ActivateButton> {
                 )),
             onTap: () {
               setState(() {
+
+
                 safe = !safe;
                 activeColor = safe ? kMainSafeColor : Colors.red;
               });
