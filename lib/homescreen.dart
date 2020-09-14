@@ -3,15 +3,15 @@ import 'CustomWidgets.dart';
 import 'Constants.dart';
 import 'package:intl/intl.dart';
 
-class homescreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  _homescreenState createState() => _homescreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _homescreenState extends State<homescreen> {
+class _HomeScreenState extends State<HomeScreen> {
 
   bool MIC_ACTIVE = true;
-  bool GPS_ACTIVE = false;
+  bool GPS_ACTIVE = true;
   DateTime now = DateTime.now();
   String formattedTime = DateFormat.jm().format(DateTime.now());
 

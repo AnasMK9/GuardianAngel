@@ -3,6 +3,7 @@ import 'CustomWidgets.dart';
 import 'Constants.dart';
 import 'homescreen.dart';
 import 'ContactsScreen.dart';
+import 'package:gangel/History.dart';
 
 void main() {
   runApp(MyApp());
@@ -37,8 +38,8 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   List<Widget> tabs = [
     CustomPage(child: Text('Alerts')),
-    CustomPage(child: Text('History')),
-    homescreen(),
+    HistoryScreen(),
+    HomeScreen(),
     ContactsScreen(),
     CustomPage(child: Text('Profile')),
   ];
