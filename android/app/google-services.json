@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "511275446738",
+    "firebase_url": "https://g-angel.firebaseio.com",
+    "project_id": "g-angel",
+    "storage_bucket": "g-angel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511275446738:android:b9273b11fffcb4b22c980b",
+        "android_client_info": {
+          "package_name": "com.asstoot.gangel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511275446738-354hnb719gmk7hh1au51aq5q2g0d3vi7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.asstoot.gangel",
+            "certificate_hash": "0327e8a1a1675efd3d5741e87f6d851da99878c8"
+          }
+        },
+        {
+          "client_id": "511275446738-umefno6socor43hn67m2tr7vf82gf4f8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPgt8yafjooqplNk1dT6ucs-2lfSjp-eI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511275446738-umefno6socor43hn67m2tr7vf82gf4f8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
