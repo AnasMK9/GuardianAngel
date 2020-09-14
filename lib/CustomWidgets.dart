@@ -33,30 +33,42 @@ class _CustomPageState extends State<CustomPage> {
   }
 }
 
-class ActivateButton extends StatelessWidget {
-  ActivateButton({this.icon});
+class ActivateButton extends StatefulWidget {
+  ActivateButton({this.icon, this.func});
+  final Function func;
 
   final IconData icon;
 
+  @override
+  _ActivateButtonState createState() => _ActivateButtonState();
+}
+
+class _ActivateButtonState extends State<ActivateButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(20),
       child: ClipOval(
         child: Material(
-          color: kMainSafeColor, // button color
+          color: safe? kMainSafeColor:Colors.red, // button color
           child: InkWell(
-            splashColor: Colors.red, // inkwell color
+            splashColor: safe ? Colors.red: kMainSafeColor, // inkwell color
 
             child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.6,
                 height: MediaQuery.of(context).size.width * 0.6,
                 child: Icon(
-                  icon,
+                  safe ? Icons.security : Icons.warning,
                   size: 80,
                   color: Colors.white,
                 )),
-            onTap: () {},
+            onTap: () {
+              setState(() {
+                safe = !safe;
+                activeColor = safe ? kMainSafeColor : Colors.red;
+              });
+
+            },
           ),
         ),
       ),

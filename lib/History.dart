@@ -32,7 +32,6 @@ class _SituationCardState extends State<SituationCard> {
                 spreadRadius: 3,
                 blurRadius: 2)
           ]),
-
       padding: EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -74,7 +73,6 @@ class _SituationCardState extends State<SituationCard> {
               Icon(Icons.fast_forward, size: 50)
             ],
           ),
-
         ],
       ),
     );

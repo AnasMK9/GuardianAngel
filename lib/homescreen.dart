@@ -8,8 +8,9 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+bool safe = true;
 
+class _HomeScreenState extends State<HomeScreen> {
   bool MIC_ACTIVE = true;
   bool GPS_ACTIVE = true;
   DateTime now = DateTime.now();
@@ -44,8 +45,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   // ),
                   Center(
                       child: ActivateButton(
-                        icon: Icons.security,
-                      )),
+                    icon: Icons.security,
+                  )),
                   Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -58,7 +59,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                 setState(() {
                                   GPS_ACTIVE = !GPS_ACTIVE;
                                 });
-
                               },
                               child: Row(
                                 children: [
@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             GestureDetector(
                               onTap: () {
                                 setState(() {
-                                  MIC_ACTIVE= !MIC_ACTIVE;
+                                  MIC_ACTIVE = !MIC_ACTIVE;
                                 });
                               },
                               child: Row(
@@ -129,4 +129,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-

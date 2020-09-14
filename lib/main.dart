@@ -19,16 +19,15 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Guardian Angel',
-      theme: ThemeData(
-          //    canvasColor: Colors.white
-          ),
+      theme: ThemeData.dark().copyWith(
+
+      ),
       initialRoute: '/',
       routes: {'/': (context) => Homepage()},
     );
     ;
   }
 }
-
 
 class Homepage extends StatefulWidget {
   @override
@@ -51,14 +50,18 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       appBar: AppBar(
         title: Center(child: Text('Guardian Angel')),
-        backgroundColor: kMainSafeColor,
+       // backgroundColor: activeColor,
       ),
       body: SafeArea(child: tabs[currentIndex]),
       bottomNavigationBar: Theme(
-        data: Theme.of(context).copyWith(canvasColor: kMainSafeColor),
+        data: Theme.of(context)
+            .copyWith(
+
+        ),
         child: Container(
           child: BottomNavigationBar(
-            fixedColor: Colors.white,
+            fixedColor: Colors.grey
+            ,
             onTap: (index) {
               setState(() {
                 currentIndex = index;
